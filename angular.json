@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "nodebucket"
+  "defaultProject": "nodebucket",
+  "cli": {
+    "analytics": "5bbdec22-8f0e-4e40-86f2-f0a76c4951e2"
+  }
 }

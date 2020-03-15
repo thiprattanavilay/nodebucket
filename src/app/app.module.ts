@@ -14,13 +14,32 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
+
+import { SigninComponent } from './pages/signin/signin.component';
+import { CookieService } from 'ngx-cookie-service';
+import { AuthGuard } from './shared/guards/auth.guard';
+//import { AboutComponent } from './pages/about/about.component';
+//import { TaskCreateDialogComponent } from './pages/task-create-dialog/task-create-dialog.component';
+//import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BaseLayoutComponent,
     AuthLayoutComponent,
-    HomeComponent
+    HomeComponent,
+    SigninComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -30,11 +49,27 @@ import {MatIconModule} from '@angular/material/icon';
     ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes, { useHash: true, enableTracing: false, scrollPositionRestoration: 'enabled'}),
     FlexLayoutModule,
+    DragDropModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatMenuModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatListModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    CookieService,
+    AuthGuard
+
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [
+
+  ]
 })
 export class AppModule { }
+// end program

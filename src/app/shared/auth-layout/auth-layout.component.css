@@ -1,0 +1,21 @@
+.wrapper{
+    margin-top: 25px;
+}
+
+  .navbar-container {
+    padding: 5px;
+  }
+  
+  mat-toolbar {
+    background-color: #1565c0;
+  }
+  
+  .navbar-link {
+    font-size: 24px;
+    font-weight: lighter;
+    color: white;
+  }
+
+  nav {
+      padding-bottom: 5rem;
+  }

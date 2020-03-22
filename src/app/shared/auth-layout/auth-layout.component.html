@@ -1,1 +1,18 @@
-<p>auth-layout works!</p>
+<div fxLayout="column">
+        <!-- navigation -->
+        <nav fxFlex>
+          <mat-toolbar>
+            <!-- navbar container -->
+            <!--logo-->
+            <img src="/assets/img/nodebucket.png" width="150px" height="90px">
+            <div class="navbar-container">
+            </div>
+          </mat-toolbar>
+        </nav>
+      
+        <!-- main content -->
+        <div fxFlex>
+          <main class="main-content" fxFlex="100%;">
+            <router-outlet></router-outlet>
+          </main>
+        </div>

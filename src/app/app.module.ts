@@ -1,3 +1,5 @@
+// start program
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router';
@@ -27,10 +29,9 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 
 import { SigninComponent } from './pages/signin/signin.component';
 import { CookieService } from 'ngx-cookie-service';
-import { AuthGuard } from './shared/guards/auth.guard';
-//import { AboutComponent } from './pages/about/about.component';
-//import { TaskCreateDialogComponent } from './pages/task-create-dialog/task-create-dialog.component';
-//import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { AboutComponent } from './pages/about/about.component';
+import { TaskCreateDialogComponent } from './pages/task-create-dialog/task-create-dialog.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,9 @@ import { AuthGuard } from './shared/guards/auth.guard';
     AuthLayoutComponent,
     HomeComponent,
     SigninComponent,
-
+    AboutComponent,
+    TaskCreateDialogComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -63,12 +66,10 @@ import { AuthGuard } from './shared/guards/auth.guard';
   ],
   providers: [
     CookieService,
-    AuthGuard
-
   ],
   bootstrap: [AppComponent],
   entryComponents: [
-
+    TaskCreateDialogComponent
   ]
 })
 export class AppModule { }

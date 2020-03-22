@@ -1,3 +1,12 @@
+/*============================================
+; Title: signin.component.ts
+; Author: Adam Donner
+; Date: 30 November 2019
+; Description:  signin.component.ts
+;===========================================
+*/
+
+
 // start program
 
 import { Component, OnInit } from '@angular/core';
@@ -14,8 +23,6 @@ import { HttpClient } from '@angular/common/http';
 export class SigninComponent implements OnInit {
   form: FormGroup;
   errorMessage: string;
-  goodMessage: string;
-
 
   constructor(private router: Router, private cookieService: CookieService, private fb: FormBuilder, private http: HttpClient) { }
 
@@ -24,8 +31,6 @@ export class SigninComponent implements OnInit {
       empId: [null, Validators.compose([Validators.required])]
     });
   }
-
-  name:any = 'empId';
   /**
    * Login function.
    * Tests login calling API from server.
@@ -40,9 +45,8 @@ export class SigninComponent implements OnInit {
        */
       if (res) {
         this.cookieService.set('session_user', empId, 1);
-        this.goodMessage = 'You are now successfully logged in! ';
         this.router.navigate(['/']);
-      }
+      } 
       /**
        * Else display error message
        */

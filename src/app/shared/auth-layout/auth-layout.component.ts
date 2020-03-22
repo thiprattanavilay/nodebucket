@@ -1,3 +1,5 @@
+// start program
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,3 +15,4 @@ export class AuthLayoutComponent implements OnInit {
   }
 
 }
+// end program

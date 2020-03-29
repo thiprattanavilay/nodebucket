@@ -1,12 +1,3 @@
-/*============================================
-; Title: task-create-dialog.component.ts
-; Author: Adam Donner
-; Date: 12 December 2019
-; Description:  task-create-dialog.component.ts
-;===========================================
-*/
-
-
 // start program
 
 import { Component, OnInit } from '@angular/core';

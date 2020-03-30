@@ -4,12 +4,14 @@
     <mat-toolbar>
       <!-- navbar container -->
       <!--logo-->
-      <img src="/assets/img/nodebucket.png" width="150px" height="90px">
+      <img src="/assets/img/nodebucket.png" width="150px" height="80px">
       <div class="navbar-container">
+        <button class="navbar-link" routerLink="/" mat-button>Kicking Nodebucket</button>
         <button class="navbar-link" routerLink="/" mat-button>Home</button>
         <button class="navbar-link" mat-button routerLink="/about">About</button>
       </div>
       <div fxFlex></div>
+      <button class="navbar-link"mat-button>Welcome!</button>
       <button class="navbar-link"  mat-button (click)='logout()'>Logout</button>
     </mat-toolbar>
   </nav>
